@@ -1,0 +1,227 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.125rem;
+    text-transform: capitalize;
+}
+h2, h3 {
+    font-weight: 400;
+}
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    /* border: 2px solid; */
+    width: 734px;
+    height: 512px;
+    border-radius: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 4px 4px 30px 10px hsl(221, 100%, 96%);
+}
+.result {
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    color: hsl(241, 100%, 89%);
+    border-radius: 32px;
+    padding: 10px;
+}
+.result h3 {
+    margin-top: 40px;
+    margin-bottom: 0;
+    font-weight: 400;
+    opacity: 70%;
+}
+.result h2, h3, p {
+    /* margin: 0; */
+    /* margin: 44px 0; */
+    text-align: center;
+}
+.result h2 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: hsl(0, 0%, 100%);
+}
+.result p {
+    font-size: 1rem;
+    margin: 0 40px 0 40px;
+}
+.circle {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    border-radius: 50%;
+    margin: 30px auto;
+}
+.circle > p:first-child{
+    font-size: 4.25rem;
+    font-weight: 600;
+    padding-top: 30px;
+    margin: auto;
+    color: hsla(0, 0%, 100%, 0.9);
+}
+.circle > p:nth-child(2){
+    margin: 0;
+    color: hsla(241, 100%, 89%, 0.5);
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+
+/* SUMMARY SECTION */
+.summary {
+    padding: 10px 30px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 80%;
+}
+.summary h3 {
+    margin-top: 40px;
+    margin-bottom: 0;
+    font-weight: 600;
+    color: hsl(224, 30%, 27%);
+    text-align: left;
+}
+.table {
+    display: flex;
+    flex-direction: column;
+}
+.table > div {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 16px;
+    font-size: 1rem;
+}
+.table-items p:nth-of-type(1) {
+    display: inline-block;
+    width: 100px;
+    text-align: left;
+    font-weight: 500;
+    /* position: relative; */
+    /* right: 20px; */
+    color: hsl(224, 30%, 27%);
+}
+
+/* ICON AND TITLE DIV */
+
+.icon-title {
+    display: flex;
+    justify-content: center;
+}
+
+.icon-title img {
+    padding-right: 10px;
+}
+
+.table-items p:nth-of-type(2) {
+    font-weight: 600;
+}
+.table-items p span {
+    font-weight: 600;
+    opacity: 0.3;
+}
+.reaction {
+    background-color: hsla(0, 100%, 67%, 0.1);
+}
+.reaction div p:nth-of-type(1) {
+    color: hsl(0, 100%, 67%);
+}
+.memory {
+    background-color: hsla(39, 100%, 56%, 0.1);
+}
+.memory div p:nth-of-type(1) {
+    color: hsl(39, 100%, 56%);
+}
+.verbal {
+    background-color: hsla(166, 100%, 37%, 0.1);
+}
+.verbal div p:nth-of-type(1) {
+    color: hsl(166, 100%, 37%);
+}
+.visual {
+    background-color: hsla(234, 85%, 45%, 0.1);
+}
+.visual div p:nth-of-type(1) {
+    color: hsl(234, 85%, 45%);
+}
+.table a {
+    text-decoration: none;
+    text-align: center;
+    background-color: hsl(224, 30%, 27%);
+    align-self: center;
+    display: block;
+    width: 100%;
+    color: hsl(0, 0%, 100%);
+    padding: 16px 20px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    margin-top: 10px;
+}
+.table a:hover {
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+/* MEDIA QUERY */
+@media (max-width: 600px){
+    body {
+        font-size: 1rem;
+    }
+    .container {
+        width: 100%;
+        min-width: 375px;
+        height: 850px;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 3fr;
+
+    }
+    .parent {
+        align-items: normal;
+    }
+    .result {
+        height: 356px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+    .result h3 {
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    .result h2 {
+        margin-bottom: 20px;
+    }
+    .result p {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+    .summary {
+        height: 100%;
+        grid-template-rows: 10% 80%;
+    }
+    .summary h3 {
+        margin-top: 10px;
+    }
+    .circle {
+        width: 160px;
+        height: 160px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .circle > p:first-child {
+        padding-top: 15px;
+        padding-bottom: 0;
+    }
+    
+}
